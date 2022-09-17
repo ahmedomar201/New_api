@@ -36,9 +36,3 @@ class NewsGetSearchErrorState extends NewsStates{
 
 
 class NewsAppChangeModeState extends NewsStates{}
-
-
-
-
-
-

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:news_app/webviewscreen.dart';
 
 Widget buildArticleItem( articles,context)=>InkWell(
-    onTap: ()
-    {
-      navigateTo(context, WebViewScreen(articles['url']));
-    },
+  onTap: ()
+  {
+    navigateTo(context, WebViewScreen(articles['url']));
+  },
   child:   Padding(
 
     padding: const EdgeInsets.all(20),
@@ -112,10 +112,10 @@ Widget myDivider()=>Padding(
 Widget articleBuilder(list,context,{isSearch=false})=>ConditionalBuilder(
   condition: list.length>0,
   builder:(context)=>ListView.separated(
-      physics: BouncingScrollPhysics(),
-      itemBuilder: (context,index)=>buildArticleItem(list[index],context),
-      separatorBuilder:(context,index)=>myDivider(),
-      itemCount: list.length,),
+    physics: BouncingScrollPhysics(),
+    itemBuilder: (context,index)=>buildArticleItem(list[index],context),
+    separatorBuilder:(context,index)=>myDivider(),
+    itemCount: list.length,),
   fallback:(context)=>isSearch?Container():Center(child: CircularProgressIndicator()),);
 
 
